@@ -40,6 +40,7 @@ public struct CustombNavigationView<Content> : View where Content : View {
                     .navigationBarTitleDisplayMode(.inline)
                 content()
             }
+            
         }.navigationViewStyle(.stack)
     }
 }

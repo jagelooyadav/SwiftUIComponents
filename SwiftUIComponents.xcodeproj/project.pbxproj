@@ -15,6 +15,7 @@
 		16B68D312779CA820097CE5E /* SwiftUIComponentsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B68D302779CA820097CE5E /* SwiftUIComponentsUITests.swift */; };
 		16B68D332779CA820097CE5E /* SwiftUIComponentsUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B68D322779CA820097CE5E /* SwiftUIComponentsUITestsLaunchTests.swift */; };
 		16B68D40277B158C0097CE5E /* CustombNavigationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16B68D3F277B158C0097CE5E /* CustombNavigationView.swift */; };
+		16E85BA027A00F7D00025A68 /* RoundedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 16E85B9F27A00F7D00025A68 /* RoundedButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,6 +47,7 @@
 		16B68D302779CA820097CE5E /* SwiftUIComponentsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsUITests.swift; sourceTree = "<group>"; };
 		16B68D322779CA820097CE5E /* SwiftUIComponentsUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIComponentsUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		16B68D3F277B158C0097CE5E /* CustombNavigationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustombNavigationView.swift; sourceTree = "<group>"; };
+		16E85B9F27A00F7D00025A68 /* RoundedButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 				16B68D192779CA810097CE5E /* Assets.xcassets */,
 				16B68D1B2779CA810097CE5E /* Preview Content */,
 				16B68D3F277B158C0097CE5E /* CustombNavigationView.swift */,
+				16E85B9F27A00F7D00025A68 /* RoundedButton.swift */,
 			);
 			path = SwiftUIComponents;
 			sourceTree = "<group>";
@@ -263,6 +266,7 @@
 				16B68D182779CA7F0097CE5E /* ContentView.swift in Sources */,
 				16B68D162779CA7F0097CE5E /* SwiftUIComponentsApp.swift in Sources */,
 				16B68D40277B158C0097CE5E /* CustombNavigationView.swift in Sources */,
+				16E85BA027A00F7D00025A68 /* RoundedButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,13 +10,17 @@ import SwiftUI
 struct ContentView: View {
     @State var title: String?
     @State var contentTitle: String?
+    @State var submitButtonTitle: String?
+    
     var body: some View {
         let view1 = CustombNavigationView(title: title,
                                           leftBarButtonTitle: "Back", rightBarButtonTitle: "Cancel") {
             VStack {
                 Text(contentTitle ?? "")
-            }.background(.red
-            )
+                RoundedButton.init(title: "Submit", buttonStyle: .secondary).frame(height: 44.0, alignment: .center).padding([Edge.Set.leading, .trailing], 10.0)
+                Spacer()
+                
+            }
         }.onAppear {
             updateView()
         }
@@ -26,6 +30,7 @@ struct ContentView: View {
     func updateView() {
         title = "Jageloo"
         contentTitle = "Something else"
+        submitButtonTitle = "Submit"
     }
 }
 

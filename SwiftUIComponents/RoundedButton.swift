@@ -7,8 +7,8 @@
 
 import Foundation
 import SwiftUI
+
 enum ButtonType {
-    
     case primary
     case secondary
 }
@@ -16,20 +16,31 @@ enum ButtonType {
 struct RoundedButton: UIViewRepresentable {
     let title: String
     let buttonStyle: ButtonType
-    init(title: String, buttonStyle: ButtonType = .primary) {
+    var action: (() -> Void)?
+    let button = UIButton()
+    
+    init(title: String,
+         buttonStyle: ButtonType = .primary,
+         action: (() -> Void)?) {
         self.title = title
         self.buttonStyle = buttonStyle
+        self.action = action
     }
     
     func makeUIView(context: Context) -> UIButton {
-        let button = UIButton()
         button.layer.cornerRadius = 22.0
         button.backgroundColor = .systemPink
+        let action = UIAction { _ in
+            self.action?()
+        }
+        button.addAction(action, for: UIControl.Event.touchUpInside)
+        button.isUserInteractionEnabled = true
         return button
     }
     
     func updateUIView(_ uiView: UIButton, context: Context) {
         uiView.setTitle(title, for: .normal)
+        
         switch buttonStyle {
             case .primary:
                 uiView.backgroundColor = .systemPink

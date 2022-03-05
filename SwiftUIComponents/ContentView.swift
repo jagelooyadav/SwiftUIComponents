@@ -14,10 +14,13 @@ struct ContentView: View {
     
     var body: some View {
         let view1 = CustombNavigationView(title: title,
-                                          leftBarButtonTitle: "Back", rightBarButtonTitle: "Cancel") {
+                                          leftBarButtonTitle: "Back",
+                                          rightBarButtonTitle: "Cancel") {
             VStack {
-                Text(contentTitle ?? "")
-                RoundedButton.init(title: "Submit", buttonStyle: .secondary).frame(height: 44.0, alignment: .center).padding([Edge.Set.leading, .trailing], 10.0)
+                Text(contentTitle ?? "").font(SwiftUI.Font.body)
+                RoundedButton(title: "Submit", action: {
+                    print("Button clicked")
+                }).frame(height: 44.0).padding([Edge.Set.leading, .trailing], 20.0)
                 Spacer()
                 
             }
@@ -27,8 +30,20 @@ struct ContentView: View {
         return view1
     }
     
+    func submit() {
+        print("Button clicked")
+        var set: Set<String> = []
+        var ss: [String] = []
+        for element in "ABC" {
+            ss.append(String(element))
+        }
+        if Set(ss).contains("AB") {
+            print("AB found")
+        }
+    }
+    
     func updateView() {
-        title = "Jageloo"
+        title = "Jageloo Ydav"
         contentTitle = "Something else"
         submitButtonTitle = "Submit"
     }

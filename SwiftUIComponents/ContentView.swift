@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import ReusableComponents
 
 struct ContentView: View {
     @State var title: String?
@@ -21,6 +22,8 @@ struct ContentView: View {
                 RoundedButton(title: "Submit", action: {
                     print("Button clicked")
                 }).frame(height: 44.0).padding([Edge.Set.leading, .trailing], 20.0)
+                
+                CheckBoxView(title: "Checkbox1", isSelected: Binding<Bool>.constant(true))
                 Spacer()
                 
             }

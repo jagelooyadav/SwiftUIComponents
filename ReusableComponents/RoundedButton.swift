@@ -8,18 +8,18 @@
 import Foundation
 import SwiftUI
 
-enum ButtonType {
+public enum ButtonType {
     case primary
     case secondary
 }
 
-struct RoundedButton: UIViewRepresentable {
-    let title: String
-    let buttonStyle: ButtonType
-    var action: (() -> Void)?
-    let button = UIButton()
+public struct RoundedButton: UIViewRepresentable {
+    public let title: String
+    public let buttonStyle: ButtonType
+    public var action: (() -> Void)?
+    public let button = UIButton()
     
-    init(title: String,
+    public init(title: String,
          buttonStyle: ButtonType = .primary,
          action: (() -> Void)?) {
         self.title = title
@@ -27,7 +27,7 @@ struct RoundedButton: UIViewRepresentable {
         self.action = action
     }
     
-    func makeUIView(context: Context) -> UIButton {
+    public func makeUIView(context: Context) -> UIButton {
         button.layer.cornerRadius = 22.0
         button.backgroundColor = .systemPink
         let action = UIAction { _ in
@@ -38,7 +38,7 @@ struct RoundedButton: UIViewRepresentable {
         return button
     }
     
-    func updateUIView(_ uiView: UIButton, context: Context) {
+    public func updateUIView(_ uiView: UIButton, context: Context) {
         uiView.setTitle(title, for: .normal)
         
         switch buttonStyle {
